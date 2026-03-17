@@ -1,0 +1,6 @@
+Fine-tuned DistilBERT on IMDB (2000 samples)
+Epochs: 3
+Train: 1600, Val: 400
+
+Final Validation Accuracy: 0.7950
+Final Validation F1: 0.7947
