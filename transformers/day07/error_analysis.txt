@@ -1,0 +1,58 @@
+=== АНАЛИЗ ОШИБОК ===
+
+Тестовых примеров: 400
+Всего ошибок: 82 (20.5%)
+False Positives: 48
+False Negatives: 34
+
+Средняя длина всех текстов: 1252 символов
+Средняя длина ошибочных:    1311 символов
+Средняя длина правильных:   1237 символов
+
+Средняя уверенность (правильные): 92.2%
+Средняя уверенность (ошибки):     82.6%
+
+=== ПРИМЕРЫ FALSE POSITIVES ===
+
+Текст: I had a lot of expectations from this movie and more so since it was a Yashraj Film.<br /><br />Jimmy operates a call centre and one day he is invited by Pooja Singh to teach her boss, Lakhan Singh, E...
+Уверенность: 82.9%
+
+Текст: No, I've never seen any of the "Santa Slasher" series, i.e. 'Silent Night, Deadly Night,' the original 'Black Christmas' or this one, 'Christmas Evil.' I've heard all about their reputation, or, MADS ...
+Уверенность: 55.9%
+
+Текст: I first saw this movie on MST3K. And although I laughed my posterior off at the jokes, I don't particularly think this movie was all that bad. Sure it was a little hard to understand it is quite obvio...
+Уверенность: 91.1%
+
+Текст: Hearing such praise about this play, I decided to watch it when I stumbled across it on cable. I don't see how this "elivates" women and their "struggles" by focusing on the topic at hand. I guess if ...
+Уверенность: 71.3%
+
+Текст: This mini-series is actually more entertaining than some others with much bigger budgets and grander aspirations. SOTD falls somewhere between "Kung-Fu" and "H R Pufnstuff" on the entertainment spectr...
+Уверенность: 90.8%
+
+
+=== ПРИМЕРЫ FALSE NEGATIVES ===
+
+Текст: The movie held my interest, mainly because Dianne Keaton is my favorite actress. I disagree with some of the other posts on the grounds that the plot was not convoluted. I had no trouble following it ...
+Уверенность: 54.4%
+
+Текст: This movie is ridiculous! That's exactly what I like about this piece of "Guilty Pleasure". It is easy to condemn this movie for not including Pat Priest and Butch Patrick, the original Marilyn and Ed...
+Уверенность: 86.3%
+
+Текст: UK newspaper reviews seem to have concentrated on the fact that the reviewers tend to know Toby Young, the journalist on whose real-life experiences this movie is based. The key word here is "based". ...
+Уверенность: 67.6%
+
+Текст: Gédéon and Jules Naudet wanted to film a documentary about rookie New York City firefighters. What they got was the only film footage inside the World Trade Center on September 11.<br /><br />Having w...
+Уверенность: 84.2%
+
+Текст: In my years of attending film festivals, I have seen many little films like this that never get theatrical distribution, and they end up in the $3 bins at WalMart. I just found DVD of Yank Tanks there...
+Уверенность: 98.1%
+
+
+=== НАБЛЮДЕНИЯ ===
+1. Ошибочные тексты в среднем длиннее — модель обрезает их до 64 токенов
+   и теряет часть контекста (тональные слова могут быть в конце отзыва)
+2. Модель менее уверена в ошибочных предсказаниях
+3. Ирония и сарказм — частая причина ошибок (текст звучит positive,
+   но смысл negative)
+4. Смешанные отзывы ('фильм хороший, но концовка ужасная') сложны
+   для бинарной классификации
