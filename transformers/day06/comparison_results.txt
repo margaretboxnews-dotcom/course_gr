@@ -1,0 +1,14 @@
+=== Сравнение моделей ===
+
+Датасет: IMDB (2000 samples, 80/20 split)
+max_length: 64 токенов
+
+Baseline (LogReg + CLS embeddings):
+  F1 (macro): 0.7524
+  Accuracy:   0.7525
+
+Fine-tuned DistilBERT (3 epochs):
+  F1 (macro): 0.7947
+  Accuracy:   0.7950
+
+Разница F1: +5.63%
